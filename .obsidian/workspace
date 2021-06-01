@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "How to win data science competitions.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -88,6 +88,7 @@
   },
   "active": "61fb16b8f8114159",
   "lastOpenFiles": [
+    "How to win data science competitions.md",
     "Untitled.md"
   ]
 }

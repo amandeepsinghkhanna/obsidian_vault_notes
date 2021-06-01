@@ -44,7 +44,7 @@ The course is offered by the HSE university from Russia.
 
 Real world problems required a complicated process to solve them with the following steps:
 
-    1. Understanding the business problem
+   1. Understanding the business problem
     2. Problem formulation
     3. Data collection
     4. Data preprocessing
@@ -54,7 +54,7 @@ Real world problems required a complicated process to solve them with the follow
 
 It is a lot simpler process to solve a data science contest problem as it only follows the following steps:
 
-    1. Data preprocessing
+   1. Data preprocessing
     2. Modelling
 
 ### <u>Important aspects to keep in mind while competing in data science competitions:</u>
@@ -68,7 +68,7 @@ It is a lot simpler process to solve a data science contest problem as it only f
     - Doing huge calculations
 4. The only things that matters is the target metric.
 
-### <u>Families of Machine Learning Algorithms for Regression & Classification:</u>
+### <u>Families of Machine Learning Algorithms for Regression and Classification:</u>
 - Linear
 - Tree Based
 - kNN
@@ -127,19 +127,19 @@ If we apply a rank to the source of an array, it will sort the array, changes va
 ```python
 scipy.stats.rankdata
 ```
-5. <b>Log Transformations or Rasing the value to a power < 1:</b><br/>
-Another 2 techniques that particularly help the non-tree based models and especially neural networks.
-	
+5. <b>Log Transformations or Rasing the value to a power less than 1:</b><br/>
+Another 2 techniques that particularly help the non-tree based models and especially neural networks.	
+
 ```python
 # log transformation:
 np.log(1+x)
 # raising to the power<1:
 np.sqrt(x+2/3)
 ```
-						  
+	
 Both of these transformation can be useful because they drive too big values closer to the features average value also they make the values near zero more distinguishable.
 						  
-### <u>Handling Missing Values:</u>
+### Handling Missing Values:
 
 Missing values could be not numbers, empty stings or outliers like -999.
 
