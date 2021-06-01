@@ -87,7 +87,7 @@ There is no machine learning algorithm that out-performs all others for all task
 4. Co-ordinates
 
 ### Preprocessing Numerical Features:
-There are models that depend and also don't depend on the scale of the numeric features.<br/><br/>
+There are models that depend and also don't depend on the scale of the numeric features.<br/>
 kNN, Neural Networks, Linear Models and Support Vector Machines are effected by the scale of the numeric columns.<br/>
 If we multiply a numeric feature with a large number then in a kNN model every minute difference will impact the prediction in a large way.<br/>
 Linear models have trouble when all the features are scaled differently, first we want regularization to be applied to the coefficents of the linear model coefficents for features in equal amounts. But, regularizations impact turns out to be propotional to feature scale. Apart from this, gradient descent algorithm does not work well when features are not properly scaled.<br/>
@@ -149,9 +149,9 @@ sklearn.preprocessing.LabelEncoder
 ```
 There are mainly 3 methods by which we perform label encoding:
 
-        1. Label encoding can be applied in the alphebitical or sorted order.
-        2. Label encoding can be applied in the order of apprearance.
-        3. Each category can be replace by it corresponding frequency or proportion in the given column. One benifit of using frequency to encode the categorical variables is that when we have too many categories and if there are multiple categories with the same frequency then they would not be distinguishable. 
+  1. Label encoding can be applied in the alphebitical or sorted order.
+  2. Label encoding can be applied in the order of apprearance.
+  3. Each category can be replace by it corresponding frequency or proportion in the given column. One benifit of using frequency to encode the categorical variables is that when we have too many categories and if there are multiple categories with the same frequency then they would not be distinguishable. 
 
 
 2. <b>Dummy Variables:(One-Hot Encoding)</b><br/>
@@ -188,7 +188,13 @@ The features extracted from datetime features can be classified as:
 
 While dealing with coordinate data, if we have additional information about with infrastructural buildings we can add the distance to the nearest location of intrest. If we don't have such data, we can extract these relevant points from our training data. We could alternatively cluster the coordinate datapoints and treat the cluster centroids as the important data points to compute distance to a particular coordinate. Another feature that can be created is to aggregate the statistics and compute things like the number of resturants around that coordinate etc. 
 
-### Feature extraction from textual information:
+### Feature extraction and preprocessing of textual information:
+
+The steps involved in the preprocessing of textual information is as follows:
+1. Lowercasing
+2. Lemmatization
+3. Stemming
+4. Stopword Removal
 
 The two main ways to extract features from the textual information are:
 1. <b>Bag of Words:</b>
@@ -205,7 +211,7 @@ idf = np.log(x.shape[0]/(x>0).sum(0))
 x = x*idf
 sklean.feature_extraction.text.TfidfVectorizer
 ```
-Another method to extract features from textual information is to use Ngrams. In Ngrams, we not only add columns corresponding to the word, but also columns corresponding to inconsequent words.
+Another method to extract features from textual information is to use Ngrams. In Ngrams, we not only add columns corresponding to the word, but also columns corresponding to inconsequent words. Careful text preprocessing can help the performance of the bag of words approach drastically.
 
 2. <b>Word Embeddings</b>
 
