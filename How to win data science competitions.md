@@ -129,12 +129,14 @@ scipy.stats.rankdata
 ```
 5. <b>Log Transformations or Rasing the value to a power < 1:</b><br/>
 Another 2 techniques that particularly help the non-tree based models and especially neural networks.
+	
 ```python
 # log transformation:
 np.log(1+x)
 # raising to the power<1:
 np.sqrt(x+2/3)
 ```
+						  
 Both of these transformation can be useful because they drive too big values closer to the features average value also they make the values near zero more distinguishable.
 						  
 ### <u>Handling Missing Values:</u>
