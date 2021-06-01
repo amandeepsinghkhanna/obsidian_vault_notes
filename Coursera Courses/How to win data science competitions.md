@@ -1,4 +1,4 @@
-# How to win a Data Science Competition Learn from Top Kagglers
+# How to win a Data Science Competitions: Learn from Top Kagglers
 This document contains my notes from the course.
 
 Expected time to complete: <b>54 Hours</b><br/>
@@ -86,7 +86,7 @@ There is no machine learning algorithm that out-performs all others for all task
 3. Date-time
 4. Co-ordinates
 
-### <u>Preprocessing Numerical Features:</u>
+### Preprocessing Numerical Features:
 There are models that depend and also don't depend on the scale of the numeric features.<br/><br/>
 kNN, Neural Networks, Linear Models and Support Vector Machines are effected by the scale of the numeric columns.<br/>
 If we multiply a numeric feature with a large number then in a kNN model every minute difference will impact the prediction in a large way.<br/>
@@ -139,6 +139,28 @@ np.sqrt(x+2/3)
 ```
 	
 Both of these transformation can be useful because they drive too big values closer to the features average value also they make the values near zero more distinguishable.
+
+### <u>Preprocessing Categorical Features:</u>
+
+1. <b>Label Encoding:</b><br/>
+Ordinal features/columns are label encoded i.e, each category is replaced by a corresponding numerical value. This method works well with trees. Non-tree based models cannot utilize this type of pre-processed feature/variable appropriately. 
+```python
+sklearn.preprocessing.LabelEncoder
+```
+There are mainly 3 methods by which we perform label encoding:
+
+        1. Label encoding can be applied in the alphebitical or sorted order.
+        2. Label encoding can be applied in the order of apprearance.
+        3. Each category can be replace by it corresponding frequency or proportion in the given column. One benifit of using frequency to encode the categorical variables is that when we have too many categories and if there are multiple categories with the same frequency then they would not be distinguishable. 
+
+
+2. <b>Dummy Variables:(One-Hot Encoding)</b><br/>
+Nominal features/columns are one-hot encoded i.e, each category has a seperate column created for it where 1 represents the occurance that category in a particular row and the 0 represents that the category has not occured in that particular row.
+```python
+pandas.get_dummies
+sklearn.preprocessing.OneHotEncoder
+```
+Dummy variables suffer from a problem of sparsity of data.
 						  
 ### Handling Missing Values:
 
@@ -149,3 +171,42 @@ Approaches to fill missing values:
 1. -999, -1, etc - This approach creates a seperate category to represent missing values, but the performance of linear models might suffer.
 2. mean, median, mode
 3. Reconstruct value - Approximating the missing values by using the closes neighbours. This is very rarely possible.
+
+<b>Handling categories in the test dataset that are missing from the training data:</b> <br/>In this context we apply frequency encoding on the categorical column.
+
+It should be noted that Xgboost can handle missing or NaN values.
+
+### Preprocessing datetime and coordinate features:
+
+The features extracted from datetime features can be classified as:
+
+1. Periodicity: Time moments in a given period i.e, Day in week, month, year, month in year, year, hours, minutes, seconds etc.
+2. Time passed since a particular event: <br/>
+	1. Row-independent moment. example: Time since 1st Jan 2020 till value in the row.
+	2. Row-dependent moment. example: Number of days until next holiday.
+3. Difference of two datetime features.
+
+While dealing with coordinate data, if we have additional information about with infrastructural buildings we can add the distance to the nearest location of intrest. If we don't have such data, we can extract these relevant points from our training data. We could alternatively cluster the coordinate datapoints and treat the cluster centroids as the important data points to compute distance to a particular coordinate. Another feature that can be created is to aggregate the statistics and compute things like the number of resturants around that coordinate etc. 
+
+### Feature extraction from textual information:
+
+The two main ways to extract features from the textual information are:
+1. <b>Bag of Words:</b>
+In a bag of words approach we create a new column for each unique for from our textual data, then we a metric like the count of occurances of each word and place these values in the appropriate columns.
+```python
+# Count Vectorization:
+sklearn.feature_extraction.text.CountVectorizer
+# Term Frequency - Inverse Document Frequency Vectorization:
+# Assuming x is a pandas DataFrame containing word frequencies
+tf = 1/x.sum(axis=1)[:, None]
+x=x*tf
+# Inverse Document Frequency:
+idf = np.log(x.shape[0]/(x>0).sum(0))
+x = x*idf
+sklean.feature_extraction.text.TfidfVectorizer
+```
+Another method to extract features from textual information is to use Ngrams. In Ngrams, we not only add columns corresponding to the word, but also columns corresponding to inconsequent words.
+
+2. <b>Word Embeddings</b>
+
+ 
