@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "84f36ef5d25be6cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "61fb16b8f8114159",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "How to win data science competitions.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c38b68853cc7de76",
+    "type": "split",
+    "children": [
+      {
+        "id": "928d0153d7b54c96",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6464db1dd26f4586",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f46d7ec69fa1f790",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "902864e4f9edf54f",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c93428748e86012",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55831deaa9555067",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "How to win data science competitions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "61fb16b8f8114159",
+  "lastOpenFiles": [
+    "Untitled.md"
+  ]
+}
