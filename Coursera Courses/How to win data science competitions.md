@@ -1,4 +1,5 @@
 # How to win a Data Science Competition Learn from Top Kagglers
+This document contains my notes from the course.
 
 Expected time to complete: <b>54 Hours</b><br/>
 Coursera link to the course: https://www.coursera.org/learn/competitive-data-science
