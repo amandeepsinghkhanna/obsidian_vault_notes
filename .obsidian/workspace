@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Coursera Courses/How to win data science competitions.md",
-            "mode": "source"
+            "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "902864e4f9edf54f",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coursera Courses/How to win data science competitions.md",
+                "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",

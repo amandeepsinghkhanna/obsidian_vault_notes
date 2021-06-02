@@ -327,4 +327,12 @@ There are mainly three different validation strategies:
 2. <b>K-fold</b> - We split our data into k different parts and iterate through them using every part as validation set only once. It can be said that K-fold validation is k times hold out validation.
 3. <b>Leave one out</b> - Leave one out validation is a special case of k-fold validation when k is equal to the number of samples in our data. We will iterate over each sample leaving k-1 objests as training and 1 object as testing subset.
 
-The main difference between the three strategies is the number of splits that are made on the data. 
+The main difference between the three strategies is the number of splits that are made on the data.
+
+When we are trying to randomly split the data which has less number of rows, a random split of the data can fail and we may have unequal distribution of target classes within each sample. In this case we will be splitting the data using stratification which will ensure that the distribution of the target categories is maintained across all the folds. 
+
+#### User of stratification in sampling the data:
+- Small datasets
+- Unbalanced datasets
+- Multiclass classification datasets with large number of categories
+
