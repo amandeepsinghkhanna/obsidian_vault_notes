@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "902864e4f9edf54f",
@@ -88,6 +89,7 @@
   },
   "active": "347307773380c924",
   "lastOpenFiles": [
+    "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
     "Coursera Courses/How to win data science competitions.md",
     "Interview Prep/Questions to work on.md",
     "Things that I need to spend time learning.md",

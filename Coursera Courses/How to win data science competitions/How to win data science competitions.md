@@ -4,7 +4,7 @@ This document contains my notes from the course.
 Expected time to complete: <b>54 Hours</b><br/>
 Coursera link to the course: https://www.coursera.org/learn/competitive-data-science
 <br/>
-#### <u>Course Instructors</u>
+#### Course Instructors
 - Dimitry Ulyanov
 - Mikhail Torfimov
 - Marios Michailidis
@@ -13,7 +13,7 @@ Coursera link to the course: https://www.coursera.org/learn/competitive-data-sci
 
 The course is offered by the HSE university from Russia.
 
-#### <u>Weekwise Couse Syllabus:</u>
+#### Weekwise Couse Syllabus:
 
 - <b>Week1</b>
     1. Intoduction to competitions & Recap
@@ -33,7 +33,7 @@ The course is offered by the HSE university from Russia.
     1. Final project
     2. Winning solutions
 
-### <u>Data Competition Platforms:</u>
+### Data Competition Platforms:
 - Kaggle
 - DrivenData
 - CrowdAnalityx
@@ -41,7 +41,7 @@ The course is offered by the HSE university from Russia.
 - DataScienceChallenge.net
 - Datascience.net
 
-### <u>Difference between real world problems and contests:</u>
+### Difference between real world problems and contests:
 
 Real world problems required a complicated process to solve them with the following steps:
 
@@ -58,7 +58,7 @@ It is a lot simpler process to solve a data science contest problem as it only f
    1. Data preprocessing
    2. Modelling
 
-### <u>Important aspects to keep in mind while competing in data science competitions:</u>
+###  Important aspects to keep in mind while competing in data science competitions:
 1. It's all about the data and making things work and not about the algorithm itself.
 2. Sometimes machine learning might not be required to win.
 3. It doesn't matter if we use:
@@ -69,17 +69,17 @@ It is a lot simpler process to solve a data science contest problem as it only f
     - Doing huge calculations
 4. The only things that matters is the target metric.
 
-### <u>Families of Machine Learning Algorithms for Regression and Classification:</u>
+### Families of Machine Learning Algorithms for Regression and Classification:
 - Linear
 - Tree Based
 - kNN
 - Support Vector Machines
 - Neural Networks
 
-### <u>No Free Lunch Theorem:</u>
+### No Free Lunch Theorem:
 There is no machine learning algorithm that out-performs all others for all tasks.
 
-### <u>Types of Features in data:</u>
+### Types of Features in data:
 1. Nominal
 2. Ordinal
 2. Numerical
@@ -140,7 +140,7 @@ np.sqrt(x+2/3)
 	
 Both of these transformation can be useful because they drive too big values closer to the features average value also they make the values near zero more distinguishable.
 
-### <u>Preprocessing Categorical Features:</u>
+### Preprocessing Categorical Features:
 
 1. <b>Label Encoding:</b><br/>
 Ordinal features/columns are label encoded i.e, each category is replaced by a corresponding numerical value. This method works well with trees. Non-tree based models cannot utilize this type of pre-processed feature/variable appropriately. 
@@ -227,7 +227,6 @@ Word embeddings are the numeric vectors representing the textual information tha
  
  
  ### Feature generation and preprocesing images:
-
 Convolutional neural networks (CNN's) can be used to receive compressed representation of an image. When we calculate the CNN's output for an image, besides getting the output on the last layer we also have outputs from the inner layers. These outputs from the inner layers are known as <b>Descriptors</b>.
 
 The descriptors from outter layers are better to solve tasks similar to the ones that the neural network was trained on and the descriptors from the early layers have more of the task independent information and can be used for tasks that the neural network was not trained on.
@@ -239,7 +238,6 @@ For smaller datasets, finetuning is much better than building a neural network f
 Sometimes image agumentation may be used to generate more images to train the neural network.
 
 ### Exploratory Data Analysis (EDA)
-
 Exploratory data analysis is the process of looking into the data, understanding it and getting comforatble with it. When we look into the data, we get a better understanding of the data which leads to a better intuition about the data and then we can generate a hypothesis about the data and find insights. One of the major EDA tools is data visualization. When we visualize the data, we can immediately see patterns. 
 
 In data science competitions we can use EDA to identify data leaks in our data like columns, or combinations of columns that act as a proxy of the target variable. 
@@ -252,7 +250,6 @@ Few things that make EDA beter are:
 In the context of the data science competitions, it is essential to check if the distributions of all the features in the training dataset are similar to that of the testing dataset. 
 
 #### EDA on anonymized data:
-
 While dealing with anonymized data, we can try to guess the meaning and type of each feature individually. 
 
 Subsiquently, we could also find relations between pairs of features or find feature groups. 
@@ -269,7 +266,6 @@ df.describe(include="all") # Generating summary statistics for all columns in th
 One of the key components of EDA is <b>Data Visualization</b>.
 
 #### Data Visualization:
-
 Data visualizations can be broadly classfied into 2 types:
 
 1. Visualizations ment to explore individual features 
@@ -284,7 +280,6 @@ Data visualizations can be broadly classfied into 2 types:
 	2.	Correlation Matrices
 
 ### Data Cleaning
-
 In our process to clean data we check for the following things:
 1. Constant Features/Columns
 2. Duplicated Features/Columns
@@ -301,7 +296,6 @@ df.T.drop_duplicates()
 ```
 
 ### Validation and Overfitting:
-
 We use validation to check the quality of the model that we have. Usually we split our data into two parts:
 
 1. Training part
@@ -326,6 +320,7 @@ There are mainly three different validation strategies:
 1. <b>Holdout</b> - There is one split in the data and one part is considered as training dataset and the other is considered as validation dataset such that there is no overlap within the training and validation.
 2. <b>K-fold</b> - We split our data into k different parts and iterate through them using every part as validation set only once. It can be said that K-fold validation is k times hold out validation.
 3. <b>Leave one out</b> - Leave one out validation is a special case of k-fold validation when k is equal to the number of samples in our data. We will iterate over each sample leaving k-1 objests as training and 1 object as testing subset.
+4. <b>Moving window validation</b> - In case the dataset we are anlaysing is a time-series we use a moving window validation, where each period of time is used as a validation set.
 
 The main difference between the three strategies is the number of splits that are made on the data.
 
@@ -335,4 +330,19 @@ When we are trying to randomly split the data which has less number of rows, a r
 - Small datasets
 - Unbalanced datasets
 - Multiclass classification datasets with large number of categories
+
+The train - validation split of the data should be set up in such a way that it mimics the train - test split. 
+
+#### Splitting strategies in data science competitions:
+Few of the most common splitting strategies used by organisers in data science competitions are:
+1. Random, rowwise
+2. Timewise
+3. By id
+4. Combined/Composite row id
+
+#### Problems during validation of models:
+
+The problems that we encounter while improving the performance of the model on the validation dataset can be broadly cassified into 2  types:
+1. An error in the validation sage i.e, local issues. 
+2. An error in submission stage
 
