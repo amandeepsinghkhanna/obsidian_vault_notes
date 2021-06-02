@@ -46,17 +46,17 @@ The course is offered by the HSE university from Russia.
 Real world problems required a complicated process to solve them with the following steps:
 
    1. Understanding the business problem
-    2. Problem formulation
-    3. Data collection
-    4. Data preprocessing
-    5. Modelling
-    6. Methodology to evaluate the model in real life
-    7. Methodology to deploy the model
+   2. Problem formulation
+   3. Data collection
+   4. Data preprocessing
+   5. Mdelling
+   6. Methodology to evaluate the model in real life
+   7. Methodology to deploy the model
 
 It is a lot simpler process to solve a data science contest problem as it only follows the following steps:
 
    1. Data preprocessing
-    2. Modelling
+   2. Modelling
 
 ### <u>Important aspects to keep in mind while competing in data science competitions:</u>
 1. It's all about the data and making things work and not about the algorithm itself.
