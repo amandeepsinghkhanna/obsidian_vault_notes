@@ -290,3 +290,15 @@ In our process to clean data we check for the following things:
 2. Duplicated Features/Columns
 3. Duplicated rows
 4. If the dataset is shuffled
+
+While checking for duplicate columns among categorical columns, we should look out for categories that have the different category labels but will be same as another column within the table. 
+```python
+# Python code to check for features that are similar but have different labels:
+for feature in categorical_features:
+	df[feature+"_encoded"] = df[feature].factorize()
+
+df.T.drop_duplicates()
+```
+
+### Validation and Overfitting:
+
