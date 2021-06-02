@@ -302,3 +302,29 @@ df.T.drop_duplicates()
 
 ### Validation and Overfitting:
 
+We use validation to check the quality of the model that we have. Usually we split our data into two parts:
+
+1. Training part
+2. Validation part
+
+We train the model on the training part and check it's quality on the validation part. Besides this our model will see the testing data in the future once we are satisfed by the performance of the model on the validation dataset. 
+
+<b>Underfitting</b>
+
+Under fitting is when our model performs badly on the training, validation and the test set. 
+
+<b>Overfitting</b>
+
+Overfitting is when our model performs very well on training data but performance drop drastically on the validation and test datasets. 
+
+In order to build the best model we need to avoid both underfitting as well as overfitting. 
+
+#### Validation Strategies:
+
+There are mainly three different validation strategies:
+
+1. <b>Holdout</b> - There is one split in the data and one part is considered as training dataset and the other is considered as validation dataset such that there is no overlap within the training and validation.
+2. <b>K-fold</b> - We split our data into k different parts and iterate through them using every part as validation set only once. It can be said that K-fold validation is k times hold out validation.
+3. <b>Leave one out</b> - Leave one out validation is a special case of k-fold validation when k is equal to the number of samples in our data. We will iterate over each sample leaving k-1 objests as training and 1 object as testing subset.
+
+The main difference between the three strategies is the number of splits that are made on the data. 
