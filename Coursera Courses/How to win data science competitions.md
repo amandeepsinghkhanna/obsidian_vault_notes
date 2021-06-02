@@ -244,7 +244,49 @@ Exploratory data analysis is the process of looking into the data, understanding
 
 In data science competitions we can use EDA to identify data leaks in our data like columns, or combinations of columns that act as a proxy of the target variable. 
 
+Few things that make EDA beter are:
+1. Domain knowledge
+2. Checking if the data is intuitive
+3. Understanding how the data was generated
 
+In the context of the data science competitions, it is essential to check if the distributions of all the features in the training dataset are similar to that of the testing dataset. 
 
+#### EDA on anonymized data:
 
+While dealing with anonymized data, we can try to guess the meaning and type of each feature individually. 
 
+Subsiquently, we could also find relations between pairs of features or find feature groups. 
+
+A few helpful pandas functions to help facilitate better EDA are:
+```python
+df.dtypes # Type of each column in a pandas DataFrame.
+df.info() # Datatype of each column with it's row count.
+df.value_counts() # Unique values in a column with its counts.
+x.isnull() # Checking for missing values in a column in a pandas DataFrame.
+df.describe(include="all") # Generating summary statistics for all columns in the pandas DataFrame.
+```
+
+One of the key components of EDA is <b>Data Visualization</b>.
+
+#### Data Visualization:
+
+Data visualizations can be broadly classfied into 2 types:
+
+1. Visualizations ment to explore individual features 
+	1. Histograms
+	2. Row index vs feature value as a scatter plot
+	```python
+	plt.hist(x)
+	plt.plot(x, ".")
+	```
+2. Visualizations ment to explore feature relationships
+	1.	Scatter Plots
+	2.	Correlation Matrices
+
+### Data Cleaning
+
+In our process to clean data we check for the following things:
+1. Constant Features/Columns
+2. Duplicated Features/Columns
+3. Duplicated rows
+4. If the dataset is shuffled
