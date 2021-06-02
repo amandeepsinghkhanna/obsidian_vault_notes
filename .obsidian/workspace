@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "26d7051595085a9b",
+        "id": "347307773380c924",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Questions to work on.md",
-            "mode": "preview"
+            "file": "Coursera Courses/How to win data science competitions.md",
+            "mode": "source"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "902864e4f9edf54f",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions to work on.md",
+                "file": "Coursera Courses/How to win data science competitions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,10 +87,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "26d7051595085a9b",
+  "active": "347307773380c924",
   "lastOpenFiles": [
-    "Things that I need to spend time learning.md",
     "Coursera Courses/How to win data science competitions.md",
+    "Interview Prep/Questions to work on.md",
+    "Things that I need to spend time learning.md",
     "Untitled.md",
     "How to win data science competitions.md"
   ]

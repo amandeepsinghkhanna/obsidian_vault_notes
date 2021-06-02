@@ -215,4 +215,27 @@ Another method to extract features from textual information is to use Ngrams. In
 
 2. <b>Word Embeddings</b>
 
+Word embeddings are the numeric vectors representing the textual information that are generated using a neural network. The general intiution is that words that have similar meanings will often have similar numeric vector representations.
+
+ A few examples for word embeddings that are used for words are:
+ Word2Vec, Glove, FastText, etc
  
+ A few examples of word embeddings that are used on sentences are:
+ Doc2vec, etc 
+ 
+ Word embeddings overcome the problem of sparsity from the bag of words approach.
+ 
+ 
+ ### Feature generation and preprocesing images:
+
+Convolutional neural networks (CNN's) can be used to receive compressed representation of an image. When we calculate the CNN's output for an image, besides getting the output on the last layer we also have outputs from the inner layers. These outputs from the inner layers are known as <b>Descriptors</b>.
+
+The descriptors from outter layers are better to solve tasks similar to the ones that the neural network was trained on and the descriptors from the early layers have more of the task independent information and can be used for tasks that the neural network was not trained on.
+
+To improve the performance of a neural network that is pre-trained we can tune the hyperparameters and this process is known as <b>Finetuning</b>. The process of finetuning the neural network is also known as <b>Transfer Learning</b>.
+
+For smaller datasets, finetuning is much better than building a neural network from scratch. 
+
+Sometimes image agumentation may be used to generate more images to train the neural network.
+
+### Exploratory Data Analysis (EDA)
