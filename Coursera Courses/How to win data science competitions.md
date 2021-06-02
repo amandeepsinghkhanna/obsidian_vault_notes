@@ -239,3 +239,12 @@ For smaller datasets, finetuning is much better than building a neural network f
 Sometimes image agumentation may be used to generate more images to train the neural network.
 
 ### Exploratory Data Analysis (EDA)
+
+Exploratory data analysis is the process of looking into the data, understanding it and getting comforatble with it. When we look into the data, we get a better understanding of the data which leads to a better intuition about the data and then we can generate a hypothesis about the data and find insights. One of the major EDA tools is data visualization. When we visualize the data, we can immediately see patterns. 
+
+In data science competitions we can use EDA to identify data leaks in our data like columns, or combinations of columns that act as a proxy of the target variable. 
+
+
+
+
+
