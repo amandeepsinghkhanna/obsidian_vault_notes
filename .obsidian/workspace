@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -78,6 +78,14 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
+            }
+          },
+          {
+            "id": "a570544a8ba22be3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
             }
           }
         ]
