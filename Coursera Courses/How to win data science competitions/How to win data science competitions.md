@@ -69,7 +69,7 @@ It is a lot simpler process to solve a data science contest problem as it only f
     - Doing huge calculations
 4. The only things that matters is the target metric.
 
-### Families of Machine Learning Algorithms for Regression and Classification:
+### Families of machine learning algorithms for regression and classification:
 - Linear
 - Tree Based
 - kNN
@@ -79,14 +79,14 @@ It is a lot simpler process to solve a data science contest problem as it only f
 ### No Free Lunch Theorem:
 There is no machine learning algorithm that out-performs all others for all tasks.
 
-### Types of Features in data:
+### Types of features in data:
 1. Nominal
 2. Ordinal
 2. Numerical
 3. Date-time
 4. Co-ordinates
 
-### Preprocessing Numerical Features:
+### Preprocessing numerical features:
 There are models that depend and also don't depend on the scale of the numeric features.<br/>
 kNN, Neural Networks, Linear Models and Support Vector Machines are effected by the scale of the numeric columns.<br/>
 If we multiply a numeric feature with a large number then in a kNN model every minute difference will impact the prediction in a large way.<br/>
@@ -140,7 +140,7 @@ np.sqrt(x+2/3)
 	
 Both of these transformation can be useful because they drive too big values closer to the features average value also they make the values near zero more distinguishable.
 
-### Preprocessing Categorical Features:
+### Preprocessing categorical features:
 
 1. <b>Label Encoding:</b><br/>
 Ordinal features/columns are label encoded i.e, each category is replaced by a corresponding numerical value. This method works well with trees. Non-tree based models cannot utilize this type of preprocessed feature/variable appropriately. 
@@ -265,7 +265,7 @@ df.describe(include="all") # Generating summary statistics for all columns in th
 
 One of the key components of EDA is <b>Data Visualization</b>.
 
-#### Data Visualization:
+#### Data visualization:
 Data visualizations can be broadly classified into 2 types:
 
 1. Visualizations meant to explore individual features 
@@ -279,7 +279,7 @@ Data visualizations can be broadly classified into 2 types:
 	1.	Scatter Plots
 	2.	Correlation Matrices
 
-### Data Cleaning
+### Data cleaning
 In our process to clean data we check for the following things:
 1. Constant Features/Columns
 2. Duplicated Features/Columns
@@ -295,7 +295,7 @@ for feature in categorical_features:
 df.T.drop_duplicates()
 ```
 
-### Validation and Overfitting:
+### Validation and overfitting:
 We use validation to check the quality of the model that we have. Usually we split our data into two parts:
 
 1. Training part
@@ -313,7 +313,7 @@ Overfitting is when our model performs very well on training data but performanc
 
 In order to build the best model we need to avoid both underfitting as well as overfitting. 
 
-#### Validation Strategies:
+#### Validation strategies:
 
 There are mainly three different validation strategies:
 
@@ -343,7 +343,8 @@ Few of the most common splitting strategies used by organizers in data science c
 #### Problems during validation of models:
 
 The problems that we encounter while improving the performance of the model on the validation datasets can be broadly classified into 2  types:
-1. Problems during the validation sage
-2. Problems during the submission stage
+1. <b>Problems during the validation sage</b> - To identify the problems in our training - validation split we will see a huge difference in errors/scores of the model for training dataset and validation dataset. We also see a huge difference in optimal parameters for the model between the training and the validation datasets.
+2. <b>Problems during the submission stage</b> - To identify the problems in our validation split and the submission split we will see a huge difference between the errors/scores of the model on the validation dataset and the leader board.
+
 
 

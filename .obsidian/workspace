@@ -85,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md"
+              }
             }
           }
         ]
