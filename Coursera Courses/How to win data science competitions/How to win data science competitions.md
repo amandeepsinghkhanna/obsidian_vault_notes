@@ -353,7 +353,7 @@ In the context of a data science contest, it is important to know the metric use
 #### Regression metrics:
 
 Few of the common regression metrics are:
-1. Mean Squared Error (MSE)
+1. <b>Mean Squared Error (MSE)</b>
 
 ```tex
 MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}
@@ -361,7 +361,9 @@ MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MSE&space;=&space;\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}" title="MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}" /></a>
 
-3. Root Mean Squared Error (RMSE)
+MSE is the default metric for any  given regression problem.
+
+3. <b>Root Mean Squared Error (RMSE)</b>
 
 ```tex
 RMSE = \sqrt{\frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}}
@@ -369,13 +371,31 @@ RMSE = \sqrt{\frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}}
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=RMSE&space;=&space;\sqrt{\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}}" title="RMSE = \sqrt{\frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}}" /></a>
 
+RMSE is nothing but the MSE with a square root on it. The square root introduced to make the scale of the errors to be the same as the scale of the targets. 
+
 RMSE and MSE are similar in terms of their minimizers. 
 
-MSE and RMSE are correlated to each other i.e, if MSE of a model is greater than the other then RMSE will also follow the same pattern. 
+MSE and RMSE are correlated to each other i.e, if MSE of a model is greater than the other then RMSE will also follow the same pattern.  Hence, if our target metric is RMSE we can still use MSE to evaluate our models. 
 
-5. R-squared
-6. Adjusted R-squared
-7. Mean Absolute Error (MAE
+We cannot determine how good our model is based on the value of MSE or RMSE, rather we can only use MSE and RMSE to compare models and see which is better. 
+
+5. <b>R-squared</b>
+
+For determining a score for a model without comparison, we use the r-squared metric. 
+
+```tex
+R^{2} = 1 - \frac{\frac{1}{N} \Sigma_{i=1}^{N}(yi - \hat{yi})^2{\frac{1}{N} \Sigma_{i=1}^{N}(yi - \overline{yi})^{2}}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;R^{2}&space;=&space;1&space;-&space;\frac{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\hat{yi})^2}&space;{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\overline{yi})^{2}}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;R^{2}&space;=&space;1&space;-&space;\frac{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\hat{yi})^2}&space;{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\overline{yi})^{2}}" title="\large R^{2} = 1 - \frac{\frac{1}{N} \Sigma_{i=1}^{N}(yi - \hat{yi})^2} {\frac{1}{N} \Sigma_{i=1}^{N}(yi - \overline{yi})^{2}}" /></a>
+
+```tex
+R^{2} = 1 - \frac{MSE}{\frac{1}{N} \Sigma_{i=1}^{N}(yi - \overline{yi})^{2}}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;R^{2}&space;=&space;1&space;-&space;\frac{MSE}&space;{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\overline{yi})^{2}}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;R^{2}&space;=&space;1&space;-&space;\frac{MSE}&space;{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\overline{yi})^{2}}" title="\large R^{2} = 1 - \frac{MSE} {\frac{1}{N} \Sigma_{i=1}^{N}(yi - \overline{yi})^{2}}" /></a>
+
+8. <b>Mean Absolute Error (MAE)</b>
 
 ```tex
 MAE = \frac{1}{N}\Sigma_{i=1}^{N}|yi - \hat{yi}|
