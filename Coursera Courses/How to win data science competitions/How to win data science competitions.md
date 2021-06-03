@@ -355,7 +355,7 @@ In the context of a data science contest, it is important to know the metric use
 Few of the common regression metrics are:
 1. Mean Squared Error (MSE)
 
-$$MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MSE&space;=&space;\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}" title="MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}" /></a>
 
 3. Root Mean Squared Error (RMSE)
 4. R-squared
