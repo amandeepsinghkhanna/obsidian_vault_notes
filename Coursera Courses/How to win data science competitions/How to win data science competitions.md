@@ -346,5 +346,28 @@ The problems that we encounter while improving the performance of the model on t
 1. <b>Problems during the validation sage</b> - To identify the problems in our training - validation split we will see a huge difference in errors/scores of the model for training dataset and validation dataset. We also see a huge difference in optimal parameters for the model between the training and the validation datasets.
 2. <b>Problems during the submission stage</b> - To identify the problems in our validation split and the submission split we will see a huge difference between the errors/scores of the model on the validation dataset and the leader board.
 
+### Metrics to evaluate machine learning models:
 
+In the context of a data science contest, it is important to know the metric used for evaluation so that we can work on optimize the model to get the best results for the specified metric.
 
+#### Regression metrics:
+
+Few of the common regression metrics are:
+1. Mean Squared Error (MSE)
+
+$$MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}$$
+
+3. Root Mean Squared Error (RMSE)
+4. R-squared
+5. Adjusted R-squared
+6. Mean Absolute Error (MAE)
+7. Mean Absolute Percentage Error (MAPE)
+8. (MSPE)
+9. (MSLE)
+
+#### Classification metrics:
+
+1. Accuracy
+2. Log loss
+3. Area under the curve
+4. Cohen's Kappa
