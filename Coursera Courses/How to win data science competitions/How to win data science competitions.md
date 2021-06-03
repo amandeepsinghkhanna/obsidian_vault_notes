@@ -355,15 +355,37 @@ In the context of a data science contest, it is important to know the metric use
 Few of the common regression metrics are:
 1. Mean Squared Error (MSE)
 
+```tex
+MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}
+```
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=MSE&space;=&space;\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MSE&space;=&space;\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}" title="MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}" /></a>
 
 3. Root Mean Squared Error (RMSE)
-4. R-squared
-5. Adjusted R-squared
-6. Mean Absolute Error (MAE)
-7. Mean Absolute Percentage Error (MAPE)
-8. (MSPE)
-9. (MSLE)
+
+```tex
+RMSE = \sqrt{\frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=RMSE&space;=&space;\sqrt{\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{N}&space;\Sigma^{N}_{i=1}(yi&space;-&space;\hat{yi})^{2}}" title="RMSE = \sqrt{\frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}}" /></a>
+
+RMSE and MSE are similar in terms of their minimizers. 
+
+MSE and RMSE are correlated to each other i.e, if MSE of a model is greater than the other then RMSE will also follow the same pattern. 
+
+5. R-squared
+6. Adjusted R-squared
+7. Mean Absolute Error (MAE
+
+```tex
+MAE = \frac{1}{N}\Sigma_{i=1}^{N}|yi - \hat{yi}|
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=MAE&space;=&space;\frac{1}{N}\Sigma_{i=1}^{N}|yi&space;-&space;\hat{yi}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MAE&space;=&space;\frac{1}{N}\Sigma_{i=1}^{N}|yi&space;-&space;\hat{yi}|" title="MAE = \frac{1}{N}\Sigma_{i=1}^{N}|yi - \hat{yi}|" /></a>
+
+9. Mean Absolute Percentage Error (MAPE)
+10. (MSPE)
+11. (MSLE)
 
 #### Classification metrics:
 
