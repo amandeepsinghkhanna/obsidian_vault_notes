@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "347307773380c924",
+        "id": "8aee92341162408c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
-            "mode": "preview"
+            "file": "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis (PCA).md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
+                "file": "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis (PCA).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md"
+                "file": "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis (PCA).md"
               }
             }
           }
@@ -97,13 +97,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "347307773380c924",
+  "active": "8aee92341162408c",
   "lastOpenFiles": [
-    "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
-    "Coursera Courses/How to win data science competitions.md",
-    "Interview Prep/Questions to work on.md",
-    "Things that I need to spend time learning.md",
     "Untitled.md",
+    "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
+    "Interview Prep/Questions to work on.md",
+    "Coursera Courses/How to win data science competitions.md",
+    "Things that I need to spend time learning.md",
     "How to win data science competitions.md"
   ]
 }

@@ -363,7 +363,7 @@ MSE = \frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}
 
 MSE is the default metric for any  given regression problem.
 
-3. <b>Root Mean Squared Error (RMSE)</b>
+2. <b>Root Mean Squared Error (RMSE)</b>
 
 ```tex
 RMSE = \sqrt{\frac{1}{N} \Sigma^{N}_{i=1}(yi - \hat{yi})^{2}}
@@ -379,7 +379,7 @@ MSE and RMSE are correlated to each other i.e, if MSE of a model is greater than
 
 We cannot determine how good our model is based on the value of MSE or RMSE, rather we can only use MSE and RMSE to compare models and see which is better. 
 
-5. <b>R-squared</b>
+3. <b>R-squared</b>
 
 For determining a score for a model without comparison, we use the r-squared metric. 
 
@@ -395,21 +395,89 @@ R^{2} = 1 - \frac{MSE}{\frac{1}{N} \Sigma_{i=1}^{N}(yi - \overline{yi})^{2}}
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;R^{2}&space;=&space;1&space;-&space;\frac{MSE}&space;{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\overline{yi})^{2}}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;R^{2}&space;=&space;1&space;-&space;\frac{MSE}&space;{\frac{1}{N}&space;\Sigma_{i=1}^{N}(yi&space;-&space;\overline{yi})^{2}}" title="\large R^{2} = 1 - \frac{MSE} {\frac{1}{N} \Sigma_{i=1}^{N}(yi - \overline{yi})^{2}}" /></a>
 
-8. <b>Mean Absolute Error (MAE)</b>
+4. <b>Mean Absolute Error (MAE)</b>
 
 ```tex
 MAE = \frac{1}{N}\Sigma_{i=1}^{N}|yi - \hat{yi}|
 ```
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=MAE&space;=&space;\frac{1}{N}\Sigma_{i=1}^{N}|yi&space;-&space;\hat{yi}|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?MAE&space;=&space;\frac{1}{N}\Sigma_{i=1}^{N}|yi&space;-&space;\hat{yi}|" title="MAE = \frac{1}{N}\Sigma_{i=1}^{N}|yi - \hat{yi}|" /></a>
+ 
+ We would use MAE over MSE and RMSE when we have outliers in our data as MAE is less sensitive to outliers.
+ 
+5. <b>Mean Squared Percentage Error (MSPE)</b>
 
-9. Mean Absolute Percentage Error (MAPE)
-10. (MSPE)
-11. (MSLE)
+```tex
+MSPE = \frac{100%}{N}\Sigma_{i=1}^{N}(\frac{yi - \hat{yi}}{yi})^{2}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;MSPE&space;=&space;\frac{100%}{N}\Sigma_{i=1}^{N}(\frac{yi&space;-&space;\hat{yi}}{yi})^{2}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;MSPE&space;=&space;\frac{100%}{N}\Sigma_{i=1}^{N}(\frac{yi&space;-&space;\hat{yi}}{yi})^{2}" title="\large MSPE = \frac{100%}{N}\Sigma_{i=1}^{N}(\frac{yi - \hat{yi}}{yi})^{2}" /></a>
+
+MSPE is a relative measure and is a weighted version of the MSE.
+The weight assigned to a sample in MSPE is inversely proportional to the square of the target. 
+
+6. <b>Mean Absolute Percentage Error (MAPE)</b>
+
+```tex
+MAPE = \frac{100%}{N} \Sigma_{i=1}^{N} \left | \frac{yi - \hat{yi}}{yi} \right |
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;MAPE&space;=&space;\frac{100%}{N}&space;\Sigma_{i=1}^{N}&space;\left&space;|&space;\frac{yi&space;-&space;\hat{yi}}{yi}&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;MAPE&space;=&space;\frac{100%}{N}&space;\Sigma_{i=1}^{N}&space;\left&space;|&space;\frac{yi&space;-&space;\hat{yi}}{yi}&space;\right&space;|" title="\large MAPE = \frac{100%}{N} \Sigma_{i=1}^{N} \left | \frac{yi - \hat{yi}}{yi} \right |" /></a>
+
+MAPE is a relative measure and is a weighted version of the MAE. The weight assigned to a sample in MAPE is inversely proportional to the target.
+
+7. <b>Root Mean Square Logarithmic Error (RMSLE)</b>
+
+```tex
+RMSLE = \sqrt{ \frac{1}{N} \Sigma_{i=1}^{N} (log(yi + 1) - log(\hat{yi} + 1))^2 }
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;RMSLE&space;=&space;\sqrt{&space;\frac{1}{N}&space;\Sigma_{i=1}^{N}&space;(log(yi&space;&plus;&space;1)&space;-&space;log(\hat{yi}&space;&plus;&space;1))^2&space;}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;RMSLE&space;=&space;\sqrt{&space;\frac{1}{N}&space;\Sigma_{i=1}^{N}&space;(log(yi&space;&plus;&space;1)&space;-&space;log(\hat{yi}&space;&plus;&space;1))^2&space;}" title="\large RMSLE = \sqrt{ \frac{1}{N} \Sigma_{i=1}^{N} (log(yi + 1) - log(\hat{yi} + 1))^2 }" /></a>
+
+```tex
+RMSLE = RMSE(log(yi+1), log(\hat{yi}+1))
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;RMSLE&space;=&space;RMSE(log(yi&plus;1),&space;log(\hat{yi}&plus;1))" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;RMSLE&space;=&space;RMSE(log(yi&plus;1),&space;log(\hat{yi}&plus;1))" title="\large RMSLE = RMSE(log(yi+1), log(\hat{yi}+1))" /></a>
+
+```tex
+RMSLE = \sqrt{MSE(log(yi+1), log(\hat{yi}+1))}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;RMSLE&space;=&space;\sqrt{MSE(log(yi&plus;1),&space;log(\hat{yi}&plus;1))}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;RMSLE&space;=&space;\sqrt{MSE(log(yi&plus;1),&space;log(\hat{yi}&plus;1))}" title="\large RMSLE = \sqrt{MSE(log(yi+1), log(\hat{yi}+1))}" /></a>
+
+RMSLE is also used when we are more concerned about relative errors than the absolute ones. RMSLE is basically MSE in the log space.
 
 #### Classification metrics:
 
-1. Accuracy
-2. Log loss
-3. Area under the curve
-4. Cohen's Kappa
+1. <b>Accuracy</b>
+
+```
+Accuracy = \frac{1}{N}\sum_{i=1}^{N}[\hat{yi} = yi]
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;Accuracy&space;=&space;\frac{1}{N}\sum_{i=1}^{N}[\hat{yi}&space;=&space;yi]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;Accuracy&space;=&space;\frac{1}{N}\sum_{i=1}^{N}[\hat{yi}&space;=&space;yi]" title="\large Accuracy = \frac{1}{N}\sum_{i=1}^{N}[\hat{yi} = yi]" /></a>
+
+Accuracy shows us how frequently our class prediction is correct. It works on hard predictions and can be quite hard to optimize. It can be prone to miss interpretation in case of the class imbalance when observations belonging to one particular class have occurred much more frequently than the others. Accuracy doesn't care how confident the classifier is in the predictions.
+
+2. <b>Log loss</b>
+
+Log loss works with soft predictions.
+
+- Binary Log loss
+```
+LoggLoss = -\frac{1}{N}\sum_{i=1}^{N}yi log(\hat{yi})+(1-yi)log(1-\hat{yi})
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;LoggLoss&space;=&space;-\frac{1}{N}\sum_{i=1}^{N}yi&space;log(\hat{yi})&plus;(1-yi)log(1-\hat{yi})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;LoggLoss&space;=&space;-\frac{1}{N}\sum_{i=1}^{N}yi&space;log(\hat{yi})&plus;(1-yi)log(1-\hat{yi})" title="\large LoggLoss = -\frac{1}{N}\sum_{i=1}^{N}yi log(\hat{yi})+(1-yi)log(1-\hat{yi})" /></a>
+
+- Multiclass Log loss:
+
+```
+LogLoss = - \frac{1}{N}\sum_{i=1}^{N}\sum_{i=1}^{class}y_{il}log(\hat{y}_{il})
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;LogLoss&space;=&space;-&space;\frac{1}{N}\sum_{i=1}^{N}\sum_{i=1}^{class}y_{il}log(\hat{y}_{il})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\large&space;LogLoss&space;=&space;-&space;\frac{1}{N}\sum_{i=1}^{N}\sum_{i=1}^{class}y_{il}log(\hat{y}_{il})" title="\large LogLoss = - \frac{1}{N}\sum_{i=1}^{N}\sum_{i=1}^{class}y_{il}log(\hat{y}_{il})" /></a>
+
+4. <b>Area under the ROC curve</b>
+5. <b>Cohen's Kappa</b>
