@@ -452,7 +452,7 @@ RMSLE is also used when we are more concerned about relative errors than the abs
 
 1. <b>Accuracy</b>
 
-```
+```tex
 Accuracy = \frac{1}{N}\sum_{i=1}^{N}[\hat{yi} = yi]
 ```
 
@@ -465,7 +465,7 @@ Accuracy shows us how frequently our class prediction is correct. It works on ha
 Log loss works with soft predictions.
 
 - Binary Log loss
-```
+```tex
 LoggLoss = -\frac{1}{N}\sum_{i=1}^{N}yi log(\hat{yi})+(1-yi)log(1-\hat{yi})
 ```
 
@@ -473,7 +473,7 @@ LoggLoss = -\frac{1}{N}\sum_{i=1}^{N}yi log(\hat{yi})+(1-yi)log(1-\hat{yi})
 
 - Multiclass Log loss:
 
-```
+```tex
 LogLoss = - \frac{1}{N}\sum_{i=1}^{N}\sum_{i=1}^{class}y_{il}log(\hat{y}_{il})
 ```
 

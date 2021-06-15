@@ -31,10 +31,7 @@ cov(x,y) = \frac{\sum\_{i=1}^{n}(X\_{i} - \overline{X})(Y\_{i} - \overline
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;cov(x,y)&space;=&space;\frac{\sum_{i=1}^{n}(X_{i}&space;-&space;\overline{X})(Y_{i}&space;-&space;\overline{Y})}{(n-1)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;cov(x,y)&space;=&space;\frac{\sum_{i=1}^{n}(X_{i}&space;-&space;\overline{X})(Y_{i}&space;-&space;\overline{Y})}{(n-1)}" title="\large cov(x,y) = \frac{\sum_{i=1}^{n}(X_{i} - \overline{X})(Y_{i} - \overline{Y})}{(n-1)}" /></a>
 
-5. Eigen values and eigen vectors
-
-
-
+5. <b>Eigen values and eigen vectors</b>:<br/>
 
 
 
