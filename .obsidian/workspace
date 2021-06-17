@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
-            "mode": "source"
+            "file": "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis(PCA).md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
+                "file": "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis(PCA).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Coursera Courses/How to win data science competitions/How to win data science competitions.md"
+                "file": "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis(PCA).md"
               }
             }
           }
@@ -99,10 +99,11 @@
   },
   "active": "8aee92341162408c",
   "lastOpenFiles": [
-    "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
     "Algorithms Explained/Principal Component Analysis (PCA)/Principal Component Analysis(PCA).md",
-    "Untitled.md",
+    "Research Paper/Anomaly Detection using Unsupervised Machine Learning/Untitled.md",
     "Interview Prep/Questions to work on.md",
+    "Untitled.md",
+    "Coursera Courses/How to win data science competitions/How to win data science competitions.md",
     "Coursera Courses/How to win data science competitions.md",
     "Things that I need to spend time learning.md",
     "How to win data science competitions.md"
