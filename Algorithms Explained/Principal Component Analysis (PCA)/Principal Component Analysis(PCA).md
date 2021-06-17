@@ -31,8 +31,22 @@ Like all algorithms in data science, the PCA algorithm also requires us to know 
 
 1. <b> Eigen Values & Eigen Vectors</b>:</br>
 
-# ROUGH SECTION: ALL THE WIP NOTES:
 
-There are two methodologies for implementing the PCA algorithm:
-1. By solving the eigen vector
-2. By computing the Singular Value Decomposition(SVD)
+### The Algorithm:
+
+### Using Eigen value and vectors:
+
+<b>Step 1</b>: Start
+<b>Step 2</b>: Read the input dataset.
+<b>Step 3</b>: Compute the number of rows and columns in the input dataset.
+<b>Step 4</b>: Compute the minimum value between the number of rows and columns of the input dataset as max_possible_components.
+<b>Step 5</b>: Input the number of principal components to be extracted from the dataset as n_components.
+<b>Step 6</b>: If n_components is between 1 and max_possible_components proceed to <b>Step 7</b> else move to <b>Step 22</b>.
+<b>Step 7</b>: For each column/dimension in the input dataset compute the maximum, minimum and their average values.
+<b>Step 8</b>: For each column/dimension in the input dataset subtract each value with the column's maximum value and divide it by the difference of the column's respective maximum and minimum value. 
+<b>Step 9</b>: For each column/dimension in the input dataset subtract each value with the column's average value. 
+<b>Step 10</b>: For each combination of column/dimension in the input dataset compute its respective covariance and store the output as a covariance_matrix.
+<b>Step 11</b>: Compute eigen vector and values for the covariance_matrix.
+<b>Step 12</b>: Sort the the groups of eigen values & vectors in the decreasing order of their eigen values as feature_vectors.
+<b>Step 13</b>: Subset the feature_vectors for the first n_components number of elements as the subsetted_feature_vectors.
+<b>Step 14</b>: Compute the dot product of the input dataset with the subsetted_feature_vectors.
