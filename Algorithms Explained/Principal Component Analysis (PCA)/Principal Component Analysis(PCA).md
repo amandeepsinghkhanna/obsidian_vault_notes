@@ -52,4 +52,4 @@ Like all algorithms in data science, the PCA algorithm also requires us to know 
 <b>Step 14</b>: Compute the dot product of the input dataset with the subsetted_feature_vectors.</br>
 <b>Step 15</b>: Stop
 
-Find a worked example of PCA by clicking [here](Worked example of PCA.ipynb)
+Find a worked example of PCA by clicking <a href="\Worked example of PCA.ipynb">here</a>.
